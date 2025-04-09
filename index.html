@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHire - Teacher Profiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-chalkboard-teacher text-indigo-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-900">EduHire</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#register" class="text-gray-600 hover:text-indigo-600 transition">Register</a>
+                <a href="#login" class="text-gray-600 hover:text-indigo-600 transition">Sign In</a>
+                <a href="#profiles" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Browse Teachers</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20" style="min-height: 10vh;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+                <!-- Slider Content -->
+                <div class="relative h-[70vh] md:h-[60vh]">
+                    <!-- Slide 1 -->
+                    <div class="absolute inset-0 flex items-center justify-between transition-opacity duration-500 opacity-100" data-slide="1">
+                        <div class="md:w-1/2 animate-fade-in" data-animate>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-6">Where Great Teachers Meet Great Opportunities</h1>
+                            <p class="text-xl mb-8">Showcase your teaching talent and connect with schools looking for educators like you.</p>
+                            <a href="#register" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">Create Your Profile</a>
+                        </div>
+                        <div class="md:w-1/2 mt-10 md:mt-0 animate-fade-in delay-100" data-animate>
+                            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Happy teacher" 
+                                 class="rounded-lg shadow-xl transform hover:scale-105 transition duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="absolute inset-0 flex items-center justify-between transition-opacity duration-500 opacity-0" data-slide="2">
+                        <div class="md:w-1/2 animate-fade-in" data-animate>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-6">Find the Perfect Teaching Position</h1>
+                            <p class="text-xl mb-8">Browse hundreds of teaching opportunities tailored to your skills and preferences.</p>
+                            <a href="#profiles" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">Browse Jobs</a>
+                        </div>
+                        <div class="md:w-1/2 mt-10 md:mt-0 animate-fade-in delay-100" data-animate>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Teacher with students" 
+                                 class="rounded-lg shadow-xl transform hover:scale-105 transition duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="absolute inset-0 flex items-center justify-between transition-opacity duration-500 opacity-0" data-slide="3">
+                        <div class="md:w-1/2 animate-fade-in" data-animate>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-6">Connect With Top Schools</h1>
+                            <p class="text-xl mb-8">Get discovered by the best educational institutions in your area.</p>
+                            <a href="#register" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">Get Started</a>
+                        </div>
+                        <div class="md:w-1/2 mt-10 md:mt-0 animate-fade-in delay-100" data-animate>
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                                 alt="School building" 
+                                 class="rounded-lg shadow-xl transform hover:scale-105 transition duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 focus:outline-none" data-slide="1"></button>
+                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 focus:outline-none" data-slide="2"></button>
+                    <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 focus:outline-none" data-slide="3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Showcase -->
+        <section id="profiles" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 animate-fade-in" data-animate>Create Your Standout Profile</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Profile Feature 1 -->
+                    <div class="profile-card bg-gray-50 p-6 rounded-lg animate-fade-in delay-100" data-animate>
+                        <div class="text-indigo-600 text-4xl mb-4">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Academic Qualifications</h3>
+                        <p class="text-gray-600">Highlight your degrees, certifications, and specialized training to showcase your expertise.</p>
+                    </div>
+
+                    <!-- Profile Feature 2 -->
+                    <div class="profile-card bg-gray-50 p-6 rounded-lg animate-fade-in delay-200" data-animate>
+                        <div class="text-indigo-600 text-4xl mb-4">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Teaching Experience</h3>
+                        <p class="text-gray-600">Detail your years of experience, institutions worked at, and grade levels taught.</p>
+                    </div>
+
+                    <!-- Profile Feature 3 -->
+                    <div class="profile-card bg-gray-50 p-6 rounded-lg animate-fade-in delay-300" data-animate>
+                        <div class="text-indigo-600 text-4xl mb-4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Skills & Certifications</h3>
+                        <p class="text-gray-600">List your special skills, teaching methods, and any additional certifications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Registration Options -->
+    <section id="register" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12 animate-fade-in" data-animate>Join EduHire Today</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Teacher Registration -->
+                <div class="bg-indigo-50 p-8 rounded-lg animate-fade-in delay-100" data-animate>
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Are You a Teacher?</h3>
+                    <p class="text-gray-600 mb-6">Create your profile and connect with schools looking for educators like you.</p>
+                    <a href="register-teacher.html" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition inline-block">Register as Teacher</a>
+                </div>
+
+                <!-- Parent Registration -->
+                <div class="bg-green-50 p-8 rounded-lg animate-fade-in delay-200" data-animate>
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Are You a Parent?</h3>
+                    <p class="text-gray-600 mb-6">Find and connect with qualified teachers for your children's education.</p>
+                    <a href="register-parent.html" class="bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition inline-block">Register as Parent</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Subscription Plans</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Teacher Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                    <div class="bg-indigo-600 px-6 py-4">
+                        <h3 class="text-xl font-bold text-white">Teacher Plan</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold mb-4">BDT 250<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Unlimited job applications</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Profile visibility boost</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 transition font-medium">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Parent Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                    <div class="bg-purple-600 px-6 py-4">
+                        <h3 class="text-xl font-bold text-white">Parent Plan</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold mb-4">BDT 500<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Access to premium teachers</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Verified teacher profiles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>24/7 support</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700 transition font-medium">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in" data-animate>
+            <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl text-gray-600 mb-8">Subscribe to our newsletter for the latest teaching opportunities and educational resources.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="flex items-center mb-2">
+                            <i class="fas fa-map-marker-alt mr-2 text-indigo-400"></i>
+                            123 Education Road, Dhaka 1207, Bangladesh
+                        </p>
+                        <p class="flex items-center mb-2">
+                            <i class="fas fa-phone-alt mr-2 text-indigo-400"></i>
+                            +880 1234 567890
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-indigo-400"></i>
+                            info@eduhire.com
+                        </p>
+                    </address>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-indigo-400 transition">Home</a></li>
+                        <li><a href="register-teacher.html" class="hover:text-indigo-400 transition">Teacher Registration</a></li>
+                        <li><a href="register-parent.html" class="hover:text-indigo-400 transition">Parent Registration</a></li>
+                        <li><a href="#profiles" class="hover:text-indigo-400 transition">Browse Teachers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 EduHire. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
