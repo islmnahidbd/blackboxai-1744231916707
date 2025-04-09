@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration | EduHire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-chalkboard-teacher text-indigo-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-900">EduHire</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="py-12">
+        <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-8">
+                <h1 class="text-3xl font-bold text-center mb-8 text-indigo-600">Teacher Registration</h1>
+                
+                <form id="teacherForm" class="space-y-6" enctype="multipart/form-data">
+                    <!-- Personal Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                            <input type="text" id="fullName" name="fullName" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password*</label>
+                            <input type="password" id="password" name="password" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Profile Picture</label>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                                <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112 15c3.183 0 6.135.992 8.577 2.68a3 3 0 003.423.313z" />
+                                </svg>
+                            </span>
+                            <input type="file" id="profilePic" name="profilePic" accept="image/*"
+                                class="ml-5 block text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                        </div>
+                    </div>
+
+                    <!-- Qualifications -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="qualification" class="block text-sm font-medium text-gray-700 mb-1">Highest Qualification*</label>
+                            <select id="qualification" name="qualification" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="">Select qualification</option>
+                                <option value="bachelors">Bachelor's Degree</option>
+                                <option value="masters">Master's Degree</option>
+                                <option value="phd">PhD</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">Years of Experience*</label>
+                            <input type="number" id="experience" name="experience" min="0" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                    </div>
+
+                    <!-- Subjects/Grades -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Subjects/Grades Taught*</label>
+                        <div class="mt-1 space-y-2">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="subjects" value="math" class="rounded text-indigo-600">
+                                    <span class="ml-2">Mathematics</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="subjects" value="science" class="rounded text-indigo-600">
+                                    <span class="ml-2">Science</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="subjects" value="english" class="rounded text-indigo-600">
+                                    <span class="ml-2">English</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="subjects" value="history" class="rounded text-indigo-600">
+                                    <span class="ml-2">History</span>
+                                </label>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="grades" value="elementary" class="rounded text-indigo-600">
+                                    <span class="ml-2">Elementary</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="grades" value="middle" class="rounded text-indigo-600">
+                                    <span class="ml-2">Middle School</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="grades" value="high" class="rounded text-indigo-600">
+                                    <span class="ml-2">High School</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="grades" value="college" class="rounded text-indigo-600">
+                                    <span class="ml-2">College</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resume Upload -->
+                    <div>
+                        <label for="resume" class="block text-sm font-medium text-gray-700 mb-1">Upload Resume (PDF)*</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf" required
+                            class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 transition font-medium">
+                            Complete Registration
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
