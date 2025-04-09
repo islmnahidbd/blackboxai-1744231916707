@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Parent - EduHire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-chalkboard-teacher text-indigo-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-900">EduHire</span>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="register-teacher.html" class="text-gray-600 hover:text-indigo-600 transition">Register as Teacher</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Registration Form Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-[36rem] mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in" data-animate>
+                <div class="bg-white p-8 rounded-lg shadow-md w-full">
+                    <h2 class="text-2xl font-bold text-center mb-6">Register as a Parent</h2>
+                    
+                    <form id="parentForm">
+                        <div class="mb-4">
+                            <label for="fullName" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="fullName" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="block text-gray-700 mb-2">Password</label>
+                            <input type="password" id="password" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="children" class="block text-gray-700 mb-2">Number of Children</label>
+                            <input type="number" id="children" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="grades" class="block text-gray-700 mb-2">Grade Levels Needed</label>
+                            <input type="text" id="grades" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g. 3rd grade, 5th grade">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subjects" class="block text-gray-700 mb-2">Subjects Needed</label>
+                            <textarea id="subjects" rows="3" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-700 transition font-medium">
+                            Register Now
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">Already have an account? <a href="#login" class="text-green-600 hover:underline">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
